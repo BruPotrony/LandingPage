@@ -298,6 +298,21 @@ h1 {
   letter-spacing: 0.06em;
 }
 
+/* ── back link (subpages) ── */
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  transition: color 180ms ease, transform 260ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.back-link:hover {
+  color: var(--mil-bright);
+  transform: translateX(-4px);
+}
+
 /* ── animations ── */
 @keyframes link-in {
   from { opacity: 0; transform: translateY(10px); }

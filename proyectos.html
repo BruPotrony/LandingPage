@@ -15,8 +15,124 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <main class="wrap">
+    <main class="wrap projects-wrap">
       <a href="./index.html" class="back-link">← Volver</a>
+
+      <section class="card projects-card" aria-labelledby="projects-title">
+        <h1 id="projects-title">Todos mis proyectos</h1>
+        <p class="intro projects-intro" data-static="true">
+          Vista rápida de proyectos. Usa las flechas para cambiar.
+        </p>
+
+        <section class="projects-carousel" aria-label="Listado de proyectos" data-carousel>
+          <button class="carousel-arrow" type="button" aria-label="Proyecto anterior" data-prev>
+            ←
+          </button>
+
+          <div class="carousel-viewport">
+            <article class="project-item is-active" aria-labelledby="proyecto-orque" data-slide>
+              <header class="project-head project-head-orque">
+                <span class="project-index" aria-hidden="true">01</span>
+                <h2 id="proyecto-orque" class="project-title-orque">ORQUE</h2>
+              </header>
+
+              <div class="project-layout">
+                <div class="project-text">
+                  <p>
+                    ORQUE nació con dos compañeros para crear webs a medida con
+                    HTML, CSS y JavaScript.
+                  </p>
+
+                  <p>
+                    El proyecto me enseñó a captar clientes, entender lo que
+                    necesitaban de verdad y convertirlo en una web clara,
+                    rápida y con buen SEO.
+                  </p>
+                </div>
+
+                <figure class="pc-mockup" aria-label="Vista de la web ORQUE en un ordenador">
+                  <div class="pc-frame">
+                    <img
+                      src="./assets/orque.png"
+                      alt="Captura de la web de ORQUE"
+                      class="pc-screen"
+                    />
+                  </div>
+                  <div class="pc-stand" aria-hidden="true"></div>
+                  <div class="pc-base" aria-hidden="true"></div>
+                </figure>
+
+                <div class="project-notes">
+                  <p>
+                    También aprendí a ordenar mejor el contenido para que cada
+                    web se entienda al instante.
+                  </p>
+
+                  <p>
+                    La combinación de diseño, comunicación y posicionamiento fue
+                    clave para hacer un proyecto más sólido.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-actions project-actions-center">
+                <a
+                  class="project-action project-action-dark"
+                  href="https://github.com/BruPotrony/ORQUE"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="./assets/github.png" alt="" aria-hidden="true" class="project-action-icon" />
+                  <span>GitHub</span>
+                </a>
+
+                <a
+                  class="project-action project-action-light"
+                  href="https://brupotrony.github.io/ORQUE/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>Vista previa</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-item" aria-labelledby="proyecto-02" data-slide>
+              <header class="project-head">
+                <h2 id="proyecto-02">Próximo Proyecto</h2>
+                <span class="project-tag project-tag-muted">En preparación</span>
+              </header>
+              <p>
+                Espacio reservado para el siguiente caso real. Aquí aparecerán
+                objetivo, stack y resultados del proyecto.
+              </p>
+            </article>
+
+            <article class="project-item" aria-labelledby="proyecto-03" data-slide>
+              <header class="project-head">
+                <h2 id="proyecto-03">Próximo Proyecto</h2>
+                <span class="project-tag project-tag-muted">En preparación</span>
+              </header>
+              <p>
+                Nueva tarjeta lista para que añadas otro proyecto cuando quieras,
+                manteniendo el mismo diseño de portfolio.
+              </p>
+            </article>
+          </div>
+
+          <button class="carousel-arrow" type="button" aria-label="Proyecto siguiente" data-next>
+            →
+          </button>
+        </section>
+
+        <p class="carousel-counter" data-counter>1 / 3</p>
+      </section>
     </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Bru Potrony Lopez</p>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>

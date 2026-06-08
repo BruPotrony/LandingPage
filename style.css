@@ -319,9 +319,9 @@ h1 {
 
 /* ── projects page ── */
 .projects-card {
-  margin-top: 8px;
+  margin-top: 12px;
   text-align: left;
-  padding: 18px 34px 32px;
+  padding: 40px 34px 32px;
 }
 
 .projects-card h1 {

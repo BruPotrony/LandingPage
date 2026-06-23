@@ -25,9 +25,73 @@
           </button>
 
           <div class="carousel-viewport">
-            <article class="project-item is-active" aria-labelledby="proyecto-orque" data-slide>
+            <article class="project-item is-active" aria-labelledby="proyecto-04" data-slide>
               <header class="project-head project-head-orque">
                 <span class="project-index" aria-hidden="true">01</span>
+                <h2 id="proyecto-04" class="project-title-orque">Report PDF</h2>
+                <span class="project-tech" aria-label="Tecnologías usadas">Next.js 16, React 19, Tailwind CSS, Xano, Vercel</span>
+              </header>
+
+              <div class="project-split">
+                <div class="project-media-column">
+                  <figure class="pc-mockup" aria-label="Vista del generador de reportes Report PDF">
+                    <div class="pc-frame">
+                      <img
+                        src="./assets/mappa.png"
+                        alt="Captura del generador de reportes Report PDF"
+                        decoding="async"
+                        fetchpriority="high"
+                        class="pc-screen"
+                      />
+                    </div>
+                    <div class="pc-stand" aria-hidden="true"></div>
+                    <div class="pc-base" aria-hidden="true"></div>
+                  </figure>
+                </div>
+
+                <div class="project-text project-text-right">
+                  <p>
+                    Prueba de acceso para Footprint Mappa: una app que genera
+                    un PDF de reporte OCF (huella de carbono) con
+                    estadísticas y gráficos a partir de un CSV. Fui más allá
+                    del encargo y añadí scraping de la web del cliente para
+                    personalizar el informe con sus propios datos.
+                  </p>
+
+                  <p>
+                    Implementé autenticación contra una base de datos en
+                    Xano, un chat de IA para explicar el reporte y un agente
+                    de IA (también sobre Xano) que genera recomendaciones
+                    para reducir la huella de carbono. Construí frontend y
+                    API por completo en una semana mediante vibe coding.
+                  </p>
+                </div>
+              </div>
+
+              <div class="project-actions project-actions-center">
+                <a
+                  class="project-action project-action-dark"
+                  href="https://github.com/BruPotrony/report_builder"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src="./assets/github.png" alt="" aria-hidden="true" class="project-action-icon" />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  class="project-action project-action-light"
+                  href="https://report-builder-lemon.vercel.app"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>Vista previa</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-item project-item-placeholder" aria-labelledby="proyecto-orque" data-slide>
+              <header class="project-head project-head-orque">
+                <span class="project-index" aria-hidden="true">02</span>
                 <h2 id="proyecto-orque" class="project-title-orque">ORQUE</h2>
                 <span class="project-tech" aria-label="Lenguajes usados">Javascript, HTML/CSS</span>
               </header>
@@ -97,7 +161,7 @@
 
             <article class="project-item project-item-placeholder" aria-labelledby="proyecto-02" data-slide>
               <header class="project-head project-head-orque">
-                <span class="project-index" aria-hidden="true">02</span>
+                <span class="project-index" aria-hidden="true">03</span>
                 <h2 id="proyecto-02" class="project-title-orque">Risk</h2>
                 <span class="project-tech" aria-label="Tecnologías usadas">C#, .NET, WPF, Java, Spring Boot, MySQL, WebSockets</span>
               </header>
@@ -158,16 +222,21 @@
 
             <article class="project-item project-item-placeholder" aria-labelledby="proyecto-03" data-slide>
               <header class="project-head project-head-orque">
-                <span class="project-index" aria-hidden="true">03</span>
+                <span class="project-index" aria-hidden="true">04</span>
                 <h2 id="proyecto-03" class="project-title-orque">Odoo</h2>
-                <span class="project-tech" aria-label="Lenguajes usados">Python, VUE, Javascript</span>
+                <span class="project-tech" aria-label="Tecnologías usadas">Python, Odoo (ORM/APIs), Vue, Javascript</span>
               </header>
 
               <div class="project-split">
                 <div class="project-media-column">
-                  <figure class="pc-mockup" aria-label="Proyecto futuro en preparación">
+                  <figure class="pc-mockup" aria-label="Vista de la app de planta de MASTERFOAM en una tablet">
                     <div class="pc-frame">
-                      <div class="pc-screen pc-screen-placeholder">PROXIMAMENTE</div>
+                      <img
+                        src="./assets/odoo/wo_view.png"
+                        alt="Vista de la orden de trabajo en la app de planta sobre Odoo"
+                        decoding="async"
+                        class="pc-screen"
+                      />
                     </div>
                     <div class="pc-stand" aria-hidden="true"></div>
                     <div class="pc-base" aria-hidden="true"></div>
@@ -175,13 +244,43 @@
                 </div>
 
                 <div class="project-text project-text-right">
-                  <p>En desarrollo.</p>
+                  <p>
+                    Proyecto desarrollado en solitario, de principio a fin,
+                    para MASTERFOAM: una app de planta sobre Odoo para
+                    automatizar producción, materiales, stock, ubicaciones y
+                    fichajes, pensada para usarse desde una tablet en cada
+                    puesto de trabajo de la fábrica.
+                  </p>
+
+                  <p>
+                    Construí el frontend en Vue y los módulos y funciones
+                    personalizadas en Python para conectar con Odoo (ORM,
+                    controladores/APIs), cubriendo todo el ciclo: análisis,
+                    desarrollo, despliegue y formación a toda la empresa
+                    tras la puesta en marcha, siguiendo buenas prácticas de
+                    programación y tests bajo supervisión de código externa.
+                  </p>
                 </div>
               </div>
 
               <div class="project-actions project-actions-center">
-                <span class="project-action project-action-dark is-disabled" aria-disabled="true">GitHub</span>
-                <span class="project-action project-action-light is-disabled" aria-disabled="true">Vista previa</span>
+                <span class="project-action project-action-dark is-disabled" aria-disabled="true" title="Repositorio privado">
+                  <img src="./assets/lock.png" alt="" aria-hidden="true" class="project-action-icon project-action-icon-sm" />
+                  <span>Privado</span>
+                </span>
+                <button
+                  type="button"
+                  class="project-action project-action-light"
+                  data-gallery-trigger
+                  data-gallery-title="Odoo · MASTERFOAM"
+                  data-gallery='[
+                    {"type":"image","src":"./assets/odoo/profile_view.png","alt":"Vista del perfil de operario en la app de planta"},
+                    {"type":"image","src":"./assets/odoo/wo_list.png","alt":"Listado de órdenes de trabajo en la app de planta"},
+                    {"type":"pdf","src":"./assets/odoo/Shopfloor Custom APP Manual.pdf","alt":"Manual de la Shopfloor Custom App"}
+                  ]'
+                >
+                  <span>Vista previa</span>
+                </button>
               </div>
             </article>
 
@@ -192,13 +291,27 @@
           </button>
         </section>
 
-        <p class="carousel-counter" data-counter>1 / 3</p>
+        <p class="carousel-counter" data-counter>1 / 4</p>
       </section>
     </main>
 
     <footer class="footer">
       <p>© <span id="year"></span> Bru Potrony Lopez</p>
     </footer>
+
+    <div class="lightbox" data-lightbox hidden>
+      <div class="lightbox-backdrop" data-lightbox-close></div>
+      <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Recursos del proyecto">
+        <button type="button" class="lightbox-close" data-lightbox-close aria-label="Cerrar">✕</button>
+        <p class="lightbox-title" data-lightbox-title></p>
+        <div class="lightbox-stage" data-lightbox-stage></div>
+        <div class="lightbox-nav">
+          <button type="button" class="carousel-arrow lightbox-arrow" data-lightbox-prev aria-label="Recurso anterior">❮</button>
+          <p class="lightbox-counter" data-lightbox-counter></p>
+          <button type="button" class="carousel-arrow lightbox-arrow" data-lightbox-next aria-label="Recurso siguiente">❯</button>
+        </div>
+      </div>
+    </div>
 
     <script src="./script.js"></script>
   </body>

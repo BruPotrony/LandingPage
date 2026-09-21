@@ -4,7 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyectos · Bru Potrony</title>
-    <meta name="description" content="Proyectos de Bru Potrony Lopez." />
+    <meta
+      name="description"
+      content="Proyectos de Bru Potrony Lopez: app de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida."
+    />
+    <link rel="canonical" href="https://brupotrony.com/proyectos.html" />
+
+    <!-- Vista previa al compartir el enlace (LinkedIn, WhatsApp, etc.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brupotrony.com/proyectos.html" />
+    <meta property="og:title" content="Proyectos · Bru Potrony" />
+    <meta
+      property="og:description"
+      content="App de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida."
+    />
+    <meta property="og:image" content="https://brupotrony.com/assets/profile.png" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" href="./assets/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,13 +30,21 @@
     />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="projects-page">
+  <body class="projects-page" data-title-key="titleProjects">
+    <div class="lang-switch" role="group" data-i18n-aria="langAria" aria-label="Cambiar idioma">
+      <div class="lang-switch-inner">
+        <button type="button" class="key" data-lang="es" aria-pressed="true"><span class="key-content">ES</span></button>
+        <button type="button" class="key" data-lang="ca" aria-pressed="false"><span class="key-content">CA</span></button>
+        <button type="button" class="key" data-lang="en" aria-pressed="false"><span class="key-content">EN</span></button>
+      </div>
+    </div>
+
     <main class="wrap projects-wrap">
-      <a href="./index.html" class="back-link">← Volver</a>
+      <a href="./index.html" class="back-link" data-i18n="back">← Volver</a>
 
       <section class="card projects-card" aria-labelledby="projects-title">
-        <section class="projects-carousel" aria-label="Listado de proyectos" data-carousel>
-          <button class="carousel-arrow" type="button" aria-label="Proyecto anterior" data-prev>
+        <section class="projects-carousel" data-i18n-aria="carouselAria" aria-label="Listado de proyectos" data-carousel>
+          <button class="carousel-arrow" type="button" data-i18n-aria="prevAria" aria-label="Proyecto anterior" data-prev>
             ❮
           </button>
 
@@ -50,7 +74,7 @@
                 </div>
 
                 <div class="project-text project-text-right">
-                  <p>
+                  <p data-i18n="p1a">
                     Prueba de acceso para Footprint Mappa: una app que genera
                     un PDF de reporte OCF (huella de carbono) con
                     estadísticas y gráficos a partir de un CSV. Fui más allá
@@ -58,7 +82,7 @@
                     personalizar el informe con sus propios datos.
                   </p>
 
-                  <p>
+                  <p data-i18n="p1b">
                     Implementé autenticación contra una base de datos en
                     Xano, un chat de IA para explicar el reporte y un agente
                     de IA (también sobre Xano) que genera recomendaciones
@@ -84,7 +108,7 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span>Vista previa</span>
+                  <span data-i18n="preview">Vista previa</span>
                 </a>
               </div>
             </article>
@@ -114,23 +138,23 @@
                 </div>
 
                 <div class="project-text project-text-right">
-                  <p>
+                  <p data-i18n="p2a">
                     ORQUE nació con dos compañeros para crear webs a medida con
                     HTML, CSS y JavaScript.
                   </p>
 
-                  <p>
+                  <p data-i18n="p2b">
                     El proyecto me enseñó a captar clientes, entender lo que
                     necesitaban de verdad y convertirlo en una web clara,
                     rápida y con buen SEO.
                   </p>
 
-                  <p>
+                  <p data-i18n="p2c">
                     También aprendí a ordenar mejor el contenido para que cada
                     web se entienda al instante.
                   </p>
 
-                  <p>
+                  <p data-i18n="p2d">
                     La combinación de diseño, comunicación y posicionamiento fue
                     clave para hacer un proyecto más sólido.
                   </p>
@@ -154,7 +178,7 @@
                   target="_blank"
                   rel="noreferrer"
                 >
-                  <span>Vista previa</span>
+                  <span data-i18n="preview">Vista previa</span>
                 </a>
               </div>
             </article>
@@ -183,7 +207,7 @@
                 </div>
 
                 <div class="project-text project-text-right">
-                  <p>
+                  <p data-i18n="p3a">
                     Este proyecto fue el trabajo final de curso, desarrollado
                     en equipo con dos compañeros. Yo fui el responsable del
                     frontend, implementado con WPF, C# y .NET, creando la
@@ -191,7 +215,7 @@
                     multijugador de Risk.
                   </p>
 
-                  <p>
+                  <p data-i18n="p3b">
                     Durante el desarrollo aprendí conceptos de contenedores,
                     servidores, bases de datos y comunicación en tiempo real
                     mediante WebSockets, necesarios para gestionar múltiples
@@ -226,7 +250,7 @@
                     {"type":"image","src":"./assets/risk/game.png","alt":"Partida en curso del proyecto Risk"}
                   ]'
                 >
-                  <span>Vista previa</span>
+                  <span data-i18n="preview">Vista previa</span>
                 </button>
               </div>
             </article>
@@ -255,7 +279,7 @@
                 </div>
 
                 <div class="project-text project-text-right">
-                  <p>
+                  <p data-i18n="p4a">
                     Proyecto desarrollado en solitario, de principio a fin,
                     para MASTERFOAM: una app de planta sobre Odoo para
                     automatizar producción, materiales, stock, ubicaciones y
@@ -263,7 +287,7 @@
                     puesto de trabajo de la fábrica.
                   </p>
 
-                  <p>
+                  <p data-i18n="p4b">
                     Construí el frontend en Vue y los módulos y funciones
                     personalizadas en Python para conectar con Odoo (ORM,
                     controladores/APIs), cubriendo todo el ciclo: análisis,
@@ -271,13 +295,18 @@
                     tras la puesta en marcha, siguiendo buenas prácticas de
                     programación y tests bajo supervisión de código externa.
                   </p>
+
+                  <p data-i18n="p4c">
+                    Hoy la usan a diario más de 20 operarios en planta y uno
+                    de los procesos pasó de necesitar 3 personas a 1.
+                  </p>
                 </div>
               </div>
 
               <div class="project-actions project-actions-center">
-                <span class="project-action project-action-dark is-disabled" aria-disabled="true" title="Repositorio privado">
+                <span class="project-action project-action-dark is-disabled" aria-disabled="true" data-i18n-title="privateTitle" title="Repositorio privado">
                   <img src="./assets/lock.png" alt="" aria-hidden="true" class="project-action-icon project-action-icon-sm" />
-                  <span>Privado</span>
+                  <span data-i18n="privateLabel">Privado</span>
                 </span>
                 <button
                   type="button"
@@ -290,14 +319,14 @@
                     {"type":"pdf","src":"./assets/odoo/Shopfloor Custom APP Manual.pdf","alt":"Manual de la Shopfloor Custom App"}
                   ]'
                 >
-                  <span>Vista previa</span>
+                  <span data-i18n="preview">Vista previa</span>
                 </button>
               </div>
             </article>
 
           </div>
 
-          <button class="carousel-arrow" type="button" aria-label="Proyecto siguiente" data-next>
+          <button class="carousel-arrow" type="button" data-i18n-aria="nextAria" aria-label="Proyecto siguiente" data-next>
             ❯
           </button>
         </section>
@@ -312,18 +341,20 @@
 
     <div class="lightbox" data-lightbox hidden>
       <div class="lightbox-backdrop" data-lightbox-close></div>
-      <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Recursos del proyecto">
-        <button type="button" class="lightbox-close" data-lightbox-close aria-label="Cerrar">✕</button>
+      <div class="lightbox-dialog" role="dialog" aria-modal="true" data-i18n-aria="lightboxAria" aria-label="Recursos del proyecto">
+        <button type="button" class="lightbox-close" data-lightbox-close data-i18n-aria="close" aria-label="Cerrar">✕</button>
         <p class="lightbox-title" data-lightbox-title></p>
         <div class="lightbox-stage" data-lightbox-stage></div>
         <div class="lightbox-nav">
-          <button type="button" class="carousel-arrow lightbox-arrow" data-lightbox-prev aria-label="Recurso anterior">❮</button>
+          <button type="button" class="carousel-arrow lightbox-arrow" data-lightbox-prev data-i18n-aria="lbPrev" aria-label="Recurso anterior">❮</button>
           <p class="lightbox-counter" data-lightbox-counter></p>
-          <button type="button" class="carousel-arrow lightbox-arrow" data-lightbox-next aria-label="Recurso siguiente">❯</button>
+          <button type="button" class="carousel-arrow lightbox-arrow" data-lightbox-next data-i18n-aria="lbNext" aria-label="Recurso siguiente">❯</button>
         </div>
       </div>
     </div>
 
+    <script src="./i18n.js"></script>
     <script src="./script.js"></script>
+    <script src="./palette.js"></script>
   </body>
 </html>

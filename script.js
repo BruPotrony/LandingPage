@@ -4,26 +4,45 @@ if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
+// Texto traducido, con respaldo por si i18n.js no ha cargado
+const t = (key, fallback) => (window.BP_I18N && window.BP_I18N.t(key)) || fallback;
+
 // Typewriter effect on the intro paragraph
 const intro = document.querySelector('.intro');
 if (intro && !intro.dataset.static) {
-  const text = intro.textContent.trim();
   const TYPE_SPEED_MS = 28;
   const START_DELAY_MS = 700;
 
-  intro.textContent = '';
-  intro.classList.add('typing');
+  let timer = null;
+  let run = 0;
 
-  let i = 0;
-  const type = () => {
-    if (i < text.length) {
-      intro.textContent += text[i++];
-      setTimeout(type, TYPE_SPEED_MS);
-    } else {
-      intro.classList.remove('typing');
-    }
+  const typewrite = (text, delay) => {
+    clearTimeout(timer);
+    run += 1;
+    const token = run;
+
+    intro.textContent = '';
+    intro.classList.add('typing');
+
+    let i = 0;
+    const type = () => {
+      if (token !== run) return; // cambio de idioma a media escritura
+      if (i < text.length) {
+        intro.textContent += text[i++];
+        timer = setTimeout(type, TYPE_SPEED_MS);
+      } else {
+        intro.classList.remove('typing');
+      }
+    };
+    timer = setTimeout(type, delay);
   };
-  setTimeout(type, START_DELAY_MS);
+
+  typewrite(intro.textContent.trim(), START_DELAY_MS);
+
+  // i18n.js ya ha dejado el texto traducido en el parrafo cuando avisa
+  document.addEventListener('bp:languagechange', () => {
+    typewrite(intro.textContent.trim(), 120);
+  });
 }
 
 // Projects carousel navigation
@@ -59,6 +78,35 @@ if (carousel) {
     });
 
     update();
+
+    // la paleta de comandos salta a un proyecto concreto
+    window.BP_GOTO_SLIDE = (index) => {
+      if (index < 0 || index >= slides.length) return;
+      current = index;
+      update();
+    };
+
+    /* Las flechas del teclado tambien mueven el carrusel. */
+    document.addEventListener('keydown', (event) => {
+      if (event.repeat || event.ctrlKey || event.metaKey || event.altKey) return;
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+
+      // el lightbox y la paleta ya usan las flechas para lo suyo
+      const openLayer = document.querySelector('[data-lightbox]:not([hidden]), .cmdk:not([hidden])');
+      if (openLayer) return;
+
+      const target = event.target;
+      if (
+        target instanceof HTMLElement &&
+        (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)
+      ) {
+        return;
+      }
+
+      event.preventDefault();
+      const btn = event.key === 'ArrowLeft' ? prevBtn : nextBtn;
+      if (btn) btn.click();
+    });
   };
 
   if ('requestIdleCallback' in window) {
@@ -89,9 +137,9 @@ if (lightbox) {
       const wrapper = document.createElement('div');
       wrapper.className = 'lightbox-pdf';
       wrapper.innerHTML = `
-        <p>${item.alt || 'Documento PDF'}</p>
+        <p>${item.alt || t('pdfDoc', 'Documento PDF')}</p>
         <a class="project-action project-action-light" href="${item.src}" target="_blank" rel="noreferrer">
-          <span>Abrir PDF</span>
+          <span>${t('openPdf', 'Abrir PDF')}</span>
         </a>
       `;
       stage.appendChild(wrapper);

@@ -4,250 +4,144 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyectos · Bru Potrony</title>
-    <meta
-      name="description"
-      content="Proyectos de Bru Potrony Lopez: app de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida."
-    />
+    <meta name="description" content="Proyectos de Bru Potrony Lopez: app de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida." />
     <link rel="canonical" href="https://brupotrony.com/proyectos.html" />
 
-    <!-- Vista previa al compartir el enlace (LinkedIn, WhatsApp, etc.) -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://brupotrony.com/proyectos.html" />
     <meta property="og:title" content="Proyectos · Bru Potrony" />
-    <meta
-      property="og:description"
-      content="App de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida."
-    />
+    <meta property="og:description" content="App de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida." />
     <meta property="og:image" content="https://brupotrony.com/assets/profile.png" />
     <meta property="og:locale" content="es_ES" />
     <meta name="twitter:card" content="summary" />
-    <link rel="icon" href="./assets/favicon.png">
+
+    <link rel="icon" href="./assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body class="projects-page" data-title-key="titleProjects">
+  <body data-title-key="titleProjects">
     <div class="lang-switch" role="group" data-i18n-aria="langAria" aria-label="Cambiar idioma">
       <div class="lang-switch-inner">
-        <button type="button" class="key" data-lang="es" aria-pressed="true"><span class="key-content">ES</span></button>
-        <button type="button" class="key" data-lang="ca" aria-pressed="false"><span class="key-content">CA</span></button>
-        <button type="button" class="key" data-lang="en" aria-pressed="false"><span class="key-content">EN</span></button>
+        <button type="button" class="key" data-lang="es"><span class="key-content">ES</span></button>
+        <button type="button" class="key" data-lang="ca"><span class="key-content">CA</span></button>
+        <button type="button" class="key" data-lang="en"><span class="key-content">EN</span></button>
       </div>
     </div>
 
     <main class="wrap projects-wrap">
       <a href="./index.html" class="back-link" data-i18n="back">← Volver</a>
 
-      <section class="card projects-card" aria-labelledby="projects-title">
+      <section class="card projects-card">
         <section class="projects-carousel" data-i18n-aria="carouselAria" aria-label="Listado de proyectos" data-carousel>
-          <button class="carousel-arrow" type="button" data-i18n-aria="prevAria" aria-label="Proyecto anterior" data-prev>
-            ❮
-          </button>
+          <button class="carousel-arrow" type="button" data-i18n-aria="prevAria" aria-label="Proyecto anterior" data-prev>❮</button>
 
           <div class="carousel-viewport">
-            <article class="project-item is-active" aria-labelledby="proyecto-04" data-slide>
-              <header class="project-head project-head-orque">
+            <article class="project-item is-active" aria-labelledby="project-1" data-slide>
+              <header class="project-head">
                 <span class="project-index" aria-hidden="true">01</span>
-                <h2 id="proyecto-04" class="project-title-orque">Report PDF</h2>
-                <span class="project-tech" aria-label="Tecnologías usadas">Next.js 16, React 19, Tailwind CSS, Xano, Vercel</span>
+                <h2 id="project-1" class="project-title">Report PDF</h2>
+                <span class="project-tech">Next.js 16, React 19, Tailwind CSS, Xano, Vercel</span>
               </header>
 
               <div class="project-split">
                 <div class="project-media-column">
-                  <figure class="pc-mockup" aria-label="Vista del generador de reportes Report PDF">
+                  <figure class="pc-mockup">
                     <div class="pc-frame">
-                      <img
-                        src="./assets/mappa.png"
-                        alt="Captura del generador de reportes Report PDF"
-                        decoding="async"
-                        fetchpriority="high"
-                        class="pc-screen"
-                      />
+                      <img class="pc-screen" src="./assets/projects/mappa/cover.png" alt="Captura del generador de reportes Report PDF" decoding="async" fetchpriority="high" />
                     </div>
-                    <div class="pc-stand" aria-hidden="true"></div>
-                    <div class="pc-base" aria-hidden="true"></div>
                   </figure>
                 </div>
 
-                <div class="project-text project-text-right">
-                  <p data-i18n="p1a">
-                    Prueba de acceso para Footprint Mappa: una app que genera
-                    un PDF de reporte OCF (huella de carbono) con
-                    estadísticas y gráficos a partir de un CSV. Fui más allá
-                    del encargo y añadí scraping de la web del cliente para
-                    personalizar el informe con sus propios datos.
-                  </p>
-
-                  <p data-i18n="p1b">
-                    Implementé autenticación contra una base de datos en
-                    Xano, un chat de IA para explicar el reporte y un agente
-                    de IA (también sobre Xano) que genera recomendaciones
-                    para reducir la huella de carbono. Construí frontend y
-                    API por completo en una semana mediante vibe coding.
-                  </p>
+                <div class="project-text">
+                  <p data-i18n="p1a">Prueba de acceso para Footprint Mappa: una app que genera un PDF de reporte OCF (huella de carbono) con estadísticas y gráficos a partir de un CSV. Fui más allá del encargo y añadí scraping de la web del cliente para personalizar el informe con sus propios datos.</p>
+                  <p data-i18n="p1b">Implementé autenticación contra una base de datos en Xano, un chat de IA para explicar el reporte y un agente de IA (también sobre Xano) que genera recomendaciones para reducir la huella de carbono. Construí frontend y API por completo en una semana mediante vibe coding.</p>
                 </div>
               </div>
 
-              <div class="project-actions project-actions-center">
-                <a
-                  class="project-action project-action-dark"
-                  href="https://github.com/BruPotrony/report_builder"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="./assets/github.png" alt="" aria-hidden="true" class="project-action-icon" />
+              <div class="project-actions">
+                <a class="project-action" href="https://github.com/BruPotrony/report_builder" target="_blank" rel="noreferrer">
+                  <img class="project-action-icon" src="./assets/icons/github.png" alt="" />
                   <span>GitHub</span>
                 </a>
-                <a
-                  class="project-action project-action-light"
-                  href="https://report-builder-lemon.vercel.app"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a class="project-action project-action-light" href="https://report-builder-lemon.vercel.app" target="_blank" rel="noreferrer">
                   <span data-i18n="preview">Vista previa</span>
                 </a>
               </div>
             </article>
 
-            <article class="project-item project-item-placeholder" aria-labelledby="proyecto-orque" data-slide>
-              <header class="project-head project-head-orque">
+            <article class="project-item" aria-labelledby="project-2" data-slide>
+              <header class="project-head">
                 <span class="project-index" aria-hidden="true">02</span>
-                <h2 id="proyecto-orque" class="project-title-orque">ORQUE</h2>
-                <span class="project-tech" aria-label="Lenguajes usados">Javascript, HTML/CSS</span>
+                <h2 id="project-2" class="project-title">ORQUE</h2>
+                <span class="project-tech">JavaScript, HTML/CSS</span>
               </header>
 
               <div class="project-split">
                 <div class="project-media-column">
-                  <figure class="pc-mockup" aria-label="Vista de la web ORQUE en un ordenador">
+                  <figure class="pc-mockup">
                     <div class="pc-frame">
-                      <img
-                        src="./assets/orque.png"
-                        alt="Captura de la web de ORQUE"
-                        decoding="async"
-                        fetchpriority="high"
-                        class="pc-screen"
-                      />
+                      <img class="pc-screen" src="./assets/projects/orque/cover.png" alt="Captura de la web de ORQUE" decoding="async" loading="lazy" />
                     </div>
-                    <div class="pc-stand" aria-hidden="true"></div>
-                    <div class="pc-base" aria-hidden="true"></div>
                   </figure>
                 </div>
 
-                <div class="project-text project-text-right">
-                  <p data-i18n="p2a">
-                    ORQUE nació con dos compañeros para crear webs a medida con
-                    HTML, CSS y JavaScript.
-                  </p>
-
-                  <p data-i18n="p2b">
-                    El proyecto me enseñó a captar clientes, entender lo que
-                    necesitaban de verdad y convertirlo en una web clara,
-                    rápida y con buen SEO.
-                  </p>
-
-                  <p data-i18n="p2c">
-                    También aprendí a ordenar mejor el contenido para que cada
-                    web se entienda al instante.
-                  </p>
-
-                  <p data-i18n="p2d">
-                    La combinación de diseño, comunicación y posicionamiento fue
-                    clave para hacer un proyecto más sólido.
-                  </p>
+                <div class="project-text">
+                  <p data-i18n="p2a">ORQUE nació con dos compañeros para crear webs a medida con HTML, CSS y JavaScript.</p>
+                  <p data-i18n="p2b">El proyecto me enseñó a captar clientes, entender lo que necesitaban de verdad y convertirlo en una web clara, rápida y con buen SEO.</p>
+                  <p data-i18n="p2c">También aprendí a ordenar mejor el contenido para que cada web se entienda al instante.</p>
+                  <p data-i18n="p2d">La combinación de diseño, comunicación y posicionamiento fue clave para hacer un proyecto más sólido.</p>
                 </div>
               </div>
 
-              <div class="project-actions project-actions-center">
-                <a
-                  class="project-action project-action-dark"
-                  href="https://github.com/BruPotrony/ORQUE"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="./assets/github.png" alt="" aria-hidden="true" class="project-action-icon" />
+              <div class="project-actions">
+                <a class="project-action" href="https://github.com/BruPotrony/ORQUE" target="_blank" rel="noreferrer">
+                  <img class="project-action-icon" src="./assets/icons/github.png" alt="" />
                   <span>GitHub</span>
                 </a>
-
-                <a
-                  class="project-action project-action-light"
-                  href="https://brupotrony.github.io/ORQUE/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <a class="project-action project-action-light" href="https://brupotrony.github.io/ORQUE/" target="_blank" rel="noreferrer">
                   <span data-i18n="preview">Vista previa</span>
                 </a>
               </div>
             </article>
 
-            <article class="project-item project-item-placeholder" aria-labelledby="proyecto-02" data-slide>
-              <header class="project-head project-head-orque">
+            <article class="project-item" aria-labelledby="project-3" data-slide>
+              <header class="project-head">
                 <span class="project-index" aria-hidden="true">03</span>
-                <h2 id="proyecto-02" class="project-title-orque">Risk</h2>
-                <span class="project-tech" aria-label="Tecnologías usadas">C#, .NET, WPF, Java, Spring Boot, MySQL, WebSockets</span>
+                <h2 id="project-3" class="project-title">Risk</h2>
+                <span class="project-tech">C#, .NET, WPF, Java, Spring Boot, MySQL, WebSockets</span>
               </header>
 
               <div class="project-split">
                 <div class="project-media-column">
-                  <figure class="pc-mockup" aria-label="Vista del proyecto Risk en un ordenador">
+                  <figure class="pc-mockup">
                     <div class="pc-frame">
-                      <img
-                        src="./assets/risk.png"
-                        alt="Captura del proyecto Risk"
-                        decoding="async"
-                        class="pc-screen"
-                      />
+                      <img class="pc-screen" src="./assets/projects/risk/cover.png" alt="Captura del proyecto Risk" decoding="async" loading="lazy" />
                     </div>
-                    <div class="pc-stand" aria-hidden="true"></div>
-                    <div class="pc-base" aria-hidden="true"></div>
                   </figure>
                 </div>
 
-                <div class="project-text project-text-right">
-                  <p data-i18n="p3a">
-                    Este proyecto fue el trabajo final de curso, desarrollado
-                    en equipo con dos compañeros. Yo fui el responsable del
-                    frontend, implementado con WPF, C# y .NET, creando la
-                    interfaz y la lógica de juego para una adaptación
-                    multijugador de Risk.
-                  </p>
-
-                  <p data-i18n="p3b">
-                    Durante el desarrollo aprendí conceptos de contenedores,
-                    servidores, bases de datos y comunicación en tiempo real
-                    mediante WebSockets, necesarios para gestionar múltiples
-                    jugadores conectados simultáneamente. El proyecto se
-                    apoyaba en una base de datos MySQL y en un backend
-                    desarrollado con Java 21 y Spring Boot, con arquitectura
-                    cliente-servidor y funcionalidades multijugador en tiempo
-                    real.
-                  </p>
+                <div class="project-text">
+                  <p data-i18n="p3a">Este proyecto fue el trabajo final de curso, desarrollado en equipo con dos compañeros. Yo fui el responsable del frontend, implementado con WPF, C# y .NET, creando la interfaz y la lógica de juego para una adaptación multijugador de Risk.</p>
+                  <p data-i18n="p3b">Durante el desarrollo aprendí conceptos de contenedores, servidores, bases de datos y comunicación en tiempo real mediante WebSockets, necesarios para gestionar múltiples jugadores conectados simultáneamente. El proyecto se apoyaba en una base de datos MySQL y en un backend desarrollado con Java 21 y Spring Boot, con arquitectura cliente-servidor y funcionalidades multijugador en tiempo real.</p>
                 </div>
               </div>
 
-              <div class="project-actions project-actions-center">
-                <a
-                  class="project-action project-action-dark"
-                  href="https://github.com/BruPotrony/Risk"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <img src="./assets/github.png" alt="" aria-hidden="true" class="project-action-icon" />
+              <div class="project-actions">
+                <a class="project-action" href="https://github.com/BruPotrony/Risk" target="_blank" rel="noreferrer">
+                  <img class="project-action-icon" src="./assets/icons/github.png" alt="" />
                   <span>GitHub</span>
                 </a>
                 <button
                   type="button"
                   class="project-action project-action-light"
-                  data-gallery-trigger
                   data-gallery-title="Risk"
                   data-gallery='[
-                    {"type":"image","src":"./assets/risk/sign_up.png","alt":"Pantalla de registro del proyecto Risk"},
-                    {"type":"image","src":"./assets/risk/create_game.png","alt":"Pantalla de creación de partida del proyecto Risk"},
-                    {"type":"image","src":"./assets/risk/dices.png","alt":"Tirada de dados en el proyecto Risk"},
-                    {"type":"image","src":"./assets/risk/game.png","alt":"Partida en curso del proyecto Risk"}
+                    {"src":"./assets/projects/risk/sign_up.png","alt":"Pantalla de registro del proyecto Risk"},
+                    {"src":"./assets/projects/risk/create_game.png","alt":"Pantalla de creación de partida del proyecto Risk"},
+                    {"src":"./assets/projects/risk/dices.png","alt":"Tirada de dados en el proyecto Risk"},
+                    {"src":"./assets/projects/risk/game.png","alt":"Partida en curso del proyecto Risk"}
                   ]'
                 >
                   <span data-i18n="preview">Vista previa</span>
@@ -255,80 +149,51 @@
               </div>
             </article>
 
-            <article class="project-item project-item-placeholder" aria-labelledby="proyecto-03" data-slide>
-              <header class="project-head project-head-orque">
+            <article class="project-item" aria-labelledby="project-4" data-slide>
+              <header class="project-head">
                 <span class="project-index" aria-hidden="true">04</span>
-                <h2 id="proyecto-03" class="project-title-orque">Odoo</h2>
-                <span class="project-tech" aria-label="Tecnologías usadas">Python, Odoo (ORM/APIs), Vue, Javascript</span>
+                <h2 id="project-4" class="project-title">Odoo</h2>
+                <span class="project-tech">Python, Odoo (ORM/APIs), Vue, JavaScript</span>
               </header>
 
               <div class="project-split">
                 <div class="project-media-column">
-                  <figure class="pc-mockup" aria-label="Vista de la app de planta de MASTERFOAM en una tablet">
+                  <figure class="pc-mockup">
                     <div class="pc-frame">
-                      <img
-                        src="./assets/odoo/wo_view.png"
-                        alt="Vista de la orden de trabajo en la app de planta sobre Odoo"
-                        decoding="async"
-                        class="pc-screen"
-                      />
+                      <img class="pc-screen" src="./assets/projects/odoo/cover.png" alt="Vista de la orden de trabajo en la app de planta sobre Odoo" decoding="async" loading="lazy" />
                     </div>
-                    <div class="pc-stand" aria-hidden="true"></div>
-                    <div class="pc-base" aria-hidden="true"></div>
                   </figure>
                 </div>
 
-                <div class="project-text project-text-right">
-                  <p data-i18n="p4a">
-                    Proyecto desarrollado en solitario, de principio a fin,
-                    para MASTERFOAM: una app de planta sobre Odoo para
-                    automatizar producción, materiales, stock, ubicaciones y
-                    fichajes, pensada para usarse desde una tablet en cada
-                    puesto de trabajo de la fábrica.
-                  </p>
-
-                  <p data-i18n="p4b">
-                    Construí el frontend en Vue y los módulos y funciones
-                    personalizadas en Python para conectar con Odoo (ORM,
-                    controladores/APIs), cubriendo todo el ciclo: análisis,
-                    desarrollo, despliegue y formación a toda la empresa
-                    tras la puesta en marcha, siguiendo buenas prácticas de
-                    programación y tests bajo supervisión de código externa.
-                  </p>
-
-                  <p data-i18n="p4c">
-                    Hoy la usan a diario más de 20 operarios en planta y uno
-                    de los procesos pasó de necesitar 3 personas a 1.
-                  </p>
+                <div class="project-text">
+                  <p data-i18n="p4a">Proyecto desarrollado en solitario, de principio a fin, para MASTERFOAM: una app de planta sobre Odoo para automatizar producción, materiales, stock, ubicaciones y fichajes, pensada para usarse desde una tablet en cada puesto de trabajo de la fábrica.</p>
+                  <p data-i18n="p4b">Construí el frontend en Vue y los módulos y funciones personalizadas en Python para conectar con Odoo (ORM, controladores/APIs), cubriendo todo el ciclo: análisis, desarrollo, despliegue y formación a toda la empresa tras la puesta en marcha, siguiendo buenas prácticas de programación y tests bajo supervisión de código externa.</p>
+                  <p data-i18n="p4c">Hoy la usan a diario más de 20 operarios en planta y uno de los procesos pasó de necesitar 3 personas a 1.</p>
                 </div>
               </div>
 
-              <div class="project-actions project-actions-center">
-                <span class="project-action project-action-dark is-disabled" aria-disabled="true" data-i18n-title="privateTitle" title="Repositorio privado">
-                  <img src="./assets/lock.png" alt="" aria-hidden="true" class="project-action-icon project-action-icon-sm" />
+              <div class="project-actions">
+                <span class="project-action is-disabled" aria-disabled="true" data-i18n-title="privateTitle" title="Repositorio privado">
+                  <img class="project-action-icon" src="./assets/icons/lock.png" alt="" />
                   <span data-i18n="privateLabel">Privado</span>
                 </span>
                 <button
                   type="button"
                   class="project-action project-action-light"
-                  data-gallery-trigger
                   data-gallery-title="Odoo · MASTERFOAM"
                   data-gallery='[
-                    {"type":"image","src":"./assets/odoo/profile_view.png","alt":"Vista del perfil de operario en la app de planta"},
-                    {"type":"image","src":"./assets/odoo/wo_list.png","alt":"Listado de órdenes de trabajo en la app de planta"},
-                    {"type":"pdf","src":"./assets/odoo/Shopfloor Custom APP Manual.pdf","alt":"Manual de la Shopfloor Custom App"}
+                    {"src":"./assets/projects/odoo/profile_view.png","alt":"Vista del perfil de operario en la app de planta"},
+                    {"src":"./assets/projects/odoo/wo_list.png","alt":"Listado de órdenes de trabajo en la app de planta"},
+                    {"src":"./assets/projects/odoo/shopfloor_manual.pdf","alt":"Manual de la Shopfloor Custom App"}
                   ]'
                 >
                   <span data-i18n="preview">Vista previa</span>
                 </button>
               </div>
             </article>
-
           </div>
 
-          <button class="carousel-arrow" type="button" data-i18n-aria="nextAria" aria-label="Proyecto siguiente" data-next>
-            ❯
-          </button>
+          <button class="carousel-arrow" type="button" data-i18n-aria="nextAria" aria-label="Proyecto siguiente" data-next>❯</button>
         </section>
 
         <p class="carousel-counter" data-counter>1 / 4</p>
@@ -355,6 +220,5 @@
 
     <script src="./i18n.js"></script>
     <script src="./script.js"></script>
-    <script src="./palette.js"></script>
   </body>
 </html>

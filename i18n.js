@@ -1,8 +1,4 @@
-/* ============================================================
-   Traducciones ES / CA / EN.
-   Los nombres de tecnologias (Python, Vue.js, SQL...) no se
-   traducen: por eso la lista .stack no lleva claves.
-   ============================================================ */
+// Traducciones ES / CA / EN. Los nombres de tecnologías no se traducen.
 const I18N = {
   es: {
     titleHome: 'Bru Potrony · Software Developer',
@@ -17,7 +13,6 @@ const I18N = {
     githubDesc: 'Repositorios y proyectos open source',
     cvTitle: 'Currículum',
     cvDesc: 'Descarga mi currículum actualizado',
-    cvHref: './assets/cv_BruPotrony_es.pdf',
     gmailDesc: 'Escríbeme directamente por email',
     projectsTitle: 'Proyectos',
     projectsDesc: 'Trabajos y casos de estudio destacados',
@@ -34,7 +29,6 @@ const I18N = {
     lbPrev: 'Recurso anterior',
     lbNext: 'Recurso siguiente',
     openPdf: 'Abrir PDF',
-    pdfDoc: 'Documento PDF',
 
     p1a: 'Prueba de acceso para Footprint Mappa: una app que genera un PDF de reporte OCF (huella de carbono) con estadísticas y gráficos a partir de un CSV. Fui más allá del encargo y añadí scraping de la web del cliente para personalizar el informe con sus propios datos.',
     p1b: 'Implementé autenticación contra una base de datos en Xano, un chat de IA para explicar el reporte y un agente de IA (también sobre Xano) que genera recomendaciones para reducir la huella de carbono. Construí frontend y API por completo en una semana mediante vibe coding.',
@@ -65,7 +59,6 @@ const I18N = {
     githubDesc: 'Repositoris i projectes open source',
     cvTitle: 'Currículum',
     cvDesc: 'Descarrega el meu currículum actualitzat',
-    cvHref: './assets/cv_BruPotrony_cat.pdf',
     gmailDesc: 'Escriu-me directament per correu',
     projectsTitle: 'Projectes',
     projectsDesc: 'Treballs i casos d’estudi destacats',
@@ -82,7 +75,6 @@ const I18N = {
     lbPrev: 'Recurs anterior',
     lbNext: 'Recurs següent',
     openPdf: 'Obrir PDF',
-    pdfDoc: 'Document PDF',
 
     p1a: 'Prova d’accés per a Footprint Mappa: una app que genera un PDF d’informe OCF (petjada de carboni) amb estadístiques i gràfics a partir d’un CSV. Vaig anar més enllà de l’encàrrec i vaig afegir scraping del web del client per personalitzar l’informe amb les seves pròpies dades.',
     p1b: 'Vaig implementar autenticació contra una base de dades a Xano, un xat d’IA per explicar l’informe i un agent d’IA (també sobre Xano) que genera recomanacions per reduir la petjada de carboni. Vaig construir el frontend i l’API sencers en una setmana mitjançant vibe coding.',
@@ -113,7 +105,6 @@ const I18N = {
     githubDesc: 'Repositories and open source projects',
     cvTitle: 'CV',
     cvDesc: 'Download my up-to-date CV',
-    cvHref: './assets/cv_BruPotrony_en.pdf',
     gmailDesc: 'Email me directly',
     projectsTitle: 'Projects',
     projectsDesc: 'Selected work and case studies',
@@ -130,7 +121,6 @@ const I18N = {
     lbPrev: 'Previous resource',
     lbNext: 'Next resource',
     openPdf: 'Open PDF',
-    pdfDoc: 'PDF document',
 
     p1a: 'Technical test for Footprint Mappa: an app that turns a CSV into a carbon footprint (OCF) PDF report with statistics and charts. I went beyond the brief and added scraping of the client’s website to personalise the report with their own data.',
     p1b: 'I implemented authentication against a Xano database, an AI chat that explains the report and an AI agent (also on Xano) that generates recommendations to reduce the carbon footprint. I built the entire frontend and API in one week through vibe coding.',
@@ -152,65 +142,57 @@ const I18N = {
 const LANGS = ['es', 'ca', 'en'];
 const STORE_KEY = 'bp-lang';
 
-// idioma guardado > idioma del navegador > espanol
+// idioma guardado > idioma del navegador > español
 const detectLang = () => {
-  try {
-    const saved = localStorage.getItem(STORE_KEY);
-    if (saved && LANGS.indexOf(saved) !== -1) return saved;
-  } catch (err) {
-    /* modo privado o almacenamiento bloqueado: seguimos con la deteccion */
-  }
+  let saved = null;
+  try { saved = localStorage.getItem(STORE_KEY); } catch { /* almacenamiento bloqueado */ }
   const nav = (navigator.language || 'es').slice(0, 2).toLowerCase();
-  return LANGS.indexOf(nav) !== -1 ? nav : 'es';
+  return LANGS.includes(saved) ? saved : LANGS.includes(nav) ? nav : 'es';
 };
+
+const ATTRS = [
+  ['data-i18n-aria', 'aria-label'],
+  ['data-i18n-title', 'title'],
+  ['data-i18n-alt', 'alt']
+];
 
 let currentLang = null;
 
 const applyLang = (lang) => {
-  const dict = I18N[lang] || I18N.es;
+  const dict = I18N[lang];
   currentLang = lang;
   document.documentElement.lang = lang;
+  document.title = dict[document.body.dataset.titleKey];
 
-  // solo elementos hoja: textContent borraria los hijos
+  // solo elementos hoja: textContent borraría los hijos
   document.querySelectorAll('[data-i18n]').forEach((el) => {
-    const value = dict[el.getAttribute('data-i18n')];
-    if (typeof value === 'string') el.textContent = value;
+    el.textContent = dict[el.dataset.i18n];
   });
 
-  [
-    ['data-i18n-aria', 'aria-label'],
-    ['data-i18n-title', 'title'],
-    ['data-i18n-alt', 'alt'],
-    ['data-i18n-href', 'href']
-  ].forEach((pair) => {
-    document.querySelectorAll('[' + pair[0] + ']').forEach((el) => {
-      const value = dict[el.getAttribute(pair[0])];
-      if (typeof value === 'string') el.setAttribute(pair[1], value);
+  ATTRS.forEach(([source, target]) => {
+    document.querySelectorAll(`[${source}]`).forEach((el) => {
+      el.setAttribute(target, dict[el.getAttribute(source)]);
     });
   });
 
-  const titleKey = document.body.dataset.titleKey;
-  if (titleKey && dict[titleKey]) document.title = dict[titleKey];
+  const cv = document.querySelector('[data-cv-link]');
+  if (cv) cv.href = `./assets/cv/cv_BruPotrony_${lang}.pdf`;
 
   document.querySelectorAll('[data-lang]').forEach((btn) => {
-    const active = btn.getAttribute('data-lang') === lang;
+    const active = btn.dataset.lang === lang;
     btn.classList.toggle('is-active', active);
-    btn.setAttribute('aria-pressed', String(active));
+    btn.setAttribute('aria-pressed', active);
   });
 
-  window.BP_I18N = { lang: lang, t: (key) => dict[key] };
-  document.dispatchEvent(new CustomEvent('bp:languagechange', { detail: { lang: lang } }));
+  window.BP_I18N = { lang, t: (key) => dict[key] };
+  document.dispatchEvent(new CustomEvent('bp:languagechange', { detail: { lang } }));
 };
 
 document.querySelectorAll('[data-lang]').forEach((btn) => {
   btn.addEventListener('click', () => {
-    const lang = btn.getAttribute('data-lang');
-    if (!lang || lang === currentLang) return;
-    try {
-      localStorage.setItem(STORE_KEY, lang);
-    } catch (err) {
-      /* sin persistencia, pero el cambio se aplica igual */
-    }
+    const lang = btn.dataset.lang;
+    if (lang === currentLang) return;
+    try { localStorage.setItem(STORE_KEY, lang); } catch { /* sin persistencia, pero el cambio se aplica igual */ }
     applyLang(lang);
   });
 });

@@ -11,17 +11,6 @@ Personal landing page built with vanilla HTML, CSS and JavaScript. No build step
 - Vanilla JavaScript (ES2020)
 - Hosted on GitHub Pages with a custom domain
 
-## Project structure
-
-```
-.
-├── index.html        # Page markup
-├── style.css         # Theme, layout and animations
-├── script.js         # Footer year + typewriter intro
-├── assets/           # Images and icons
-└── CNAME             # Custom domain for GitHub Pages
-```
-
 ## Run locally
 
 Just open `index.html` in a browser, or serve the folder with any static server:

@@ -1,0 +1,382 @@
+/* ── ask bru: estilos propios de la página del chat ──
+   Los colores, tipografías y @keyframes salen de style.css; aquí solo va
+   lo que no usa ninguna otra página. */
+
+.chat-wrap {
+  width: min(760px, 94vw);
+  padding-top: 52px;
+}
+
+.chat-card {
+  margin-top: 12px;
+  padding: 26px 26px 20px;
+  text-align: left;
+}
+
+/* ── cabecera ── */
+.chat-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.chat-avatar {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--bg-2);
+  outline: 2px solid var(--military);
+  background: var(--bg-3);
+}
+
+.chat-head-body { min-width: 0; }
+
+.chat-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.chat-sub {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+/* mismo corte diagonal que .eyebrow, en versión pastilla de estado */
+.chat-status {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: auto;
+  align-self: flex-start;
+  flex-shrink: 0;
+  padding: 5px 10px 5px 12px;
+  background: var(--border-2);
+  clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px);
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.chat-status::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  background: var(--bg-3);
+  clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px);
+}
+
+.chat-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border-3);
+  animation: blink 1.2s step-end infinite;
+}
+
+.chat-status.is-online {
+  background: var(--military);
+  color: var(--olive);
+}
+
+.chat-status.is-online .chat-status-dot {
+  background: var(--mil-bright);
+  animation: status-pulse 2.4s var(--ease) infinite;
+}
+
+.chat-status.is-offline .chat-status-dot {
+  background: var(--border-3);
+  animation: none;
+}
+
+/* ── conversación ── */
+.chat-log {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: min(52vh, 440px);
+  margin: 16px 0;
+  padding-right: 6px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-2) transparent;
+}
+
+.chat-log::-webkit-scrollbar { width: 6px; }
+
+.chat-log::-webkit-scrollbar-thumb {
+  background: var(--border-2);
+  border-radius: 999px;
+}
+
+.chat-log::-webkit-scrollbar-thumb:hover { background: var(--military); }
+
+.msg {
+  max-width: 84%;
+  animation: link-in 340ms var(--ease) backwards;
+}
+
+.msg-body {
+  position: relative;
+  padding: 12px 15px;
+  overflow-wrap: anywhere;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--sand);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+/* barra de acento a la izquierda, igual que en los enlaces del home */
+.msg-bot .msg-body::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18%;
+  bottom: 18%;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--military);
+}
+
+.msg-user {
+  align-self: flex-end;
+}
+
+.msg-user .msg-body {
+  background: var(--mil-dim);
+  border-color: var(--military);
+  color: var(--text);
+}
+
+.msg-error .msg-body {
+  background: var(--bg-4);
+  border-style: dashed;
+  border-color: var(--border-3);
+}
+
+.msg-error .msg-body::before { background: var(--border-3); }
+
+/* formato ligero de la respuesta: párrafos, listas y código */
+.msg-body p + p,
+.msg-body ul { margin-top: 8px; }
+
+.msg-body ul {
+  margin-left: 17px;
+  list-style: square;
+}
+
+.msg-body li::marker { color: var(--military); }
+.msg-body li + li { margin-top: 3px; }
+
+.msg-body strong { color: var(--text); font-weight: 600; }
+
+.msg-body code {
+  padding: 1px 5px;
+  background: var(--bg-4);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  font-size: 0.82em;
+  color: var(--olive);
+}
+
+/* ── modelo que ha respondido ── */
+.msg-provider {
+  margin-top: 8px;
+  padding-left: 2px;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ── indicador de "pensando" ── */
+.msg-typing .msg-body {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.typing-dots {
+  display: inline-flex;
+  gap: 4px;
+}
+
+.typing-dots span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--mil-bright);
+  animation: dot-pulse 1.1s var(--ease) infinite;
+}
+
+.typing-dots span:nth-child(2) { animation-delay: 160ms; }
+.typing-dots span:nth-child(3) { animation-delay: 320ms; }
+
+.typing-label {
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.chat-send:focus-visible {
+  outline: 1px solid var(--mil-bright);
+  outline-offset: 2px;
+}
+
+/* ── composición ── */
+.chat-form {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.chat-input {
+  flex: 1;
+  min-width: 0;
+  /* si cambias max-height, cambia MAX_HEIGHT en ask-bru.js */
+  min-height: 58px;
+  max-height: 160px;
+  padding: 14px 15px;
+  /* mientras crece no debe verse barra: solo al tocar el maximo (.is-full) */
+  overflow-y: hidden;
+  background: var(--bg-3);
+  border: 1px solid var(--border-2);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  resize: none;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.chat-input::placeholder { color: var(--muted); }
+
+.chat-input.is-full {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-2) transparent;
+}
+
+.chat-input.is-full::-webkit-scrollbar { width: 6px; }
+
+.chat-input.is-full::-webkit-scrollbar-thumb {
+  background: var(--border-2);
+  border-radius: 999px;
+}
+
+.chat-input:focus {
+  outline: none;
+  background: var(--bg-4);
+  border-color: var(--military);
+}
+
+.chat-send {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+  background: var(--bg-3);
+  border: 1px solid var(--border-2);
+  border-radius: 12px;
+  color: var(--text);
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 260ms var(--ease-bounce);
+}
+
+.chat-send:hover:not(:disabled) {
+  background: var(--mil-dim);
+  border-color: var(--military);
+  color: var(--mil-bright);
+  transform: translateX(3px);
+}
+
+.chat-send:disabled,
+.chat-input:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── pie de la tarjeta ── */
+.chat-foot {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 10px;
+  color: var(--border-2);
+  font-size: 0.68rem;
+  line-height: 1.5;
+}
+
+.chat-note { flex: 1; }
+
+.chat-counter {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+}
+
+.chat-counter.is-near { color: var(--olive); }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ── animaciones propias ── */
+@keyframes dot-pulse {
+  0%, 60%, 100% { opacity: 0.25; transform: translateY(0); }
+  30%           { opacity: 1;    transform: translateY(-3px); }
+}
+
+@keyframes status-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.35; }
+}
+
+/* ── responsive ── */
+@media (max-width: 520px) {
+  .chat-wrap { padding-top: 26px; }
+  .chat-card { padding: 18px 14px 14px; }
+
+  .chat-head {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .chat-avatar { width: 44px; height: 44px; }
+  .chat-title { font-size: 1.12rem; }
+  .chat-status { order: 3; margin-left: 0; }
+
+  .chat-log { height: min(56vh, 380px); }
+  .msg { max-width: 92%; }
+}

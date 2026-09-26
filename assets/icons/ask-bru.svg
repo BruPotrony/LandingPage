@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128" role="img" aria-label="Bru AI">
+  <g fill="none" stroke="#566b2f" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30 18 H98 A16 16 0 0 1 114 34 V68 A16 16 0 0 1 98 84 H58 L30 110 L36 84 H30 A16 16 0 0 1 14 68 V34 A16 16 0 0 1 30 18 Z" />
+  </g>
+  <g fill="#566b2f">
+    <circle cx="42" cy="51" r="6" />
+    <circle cx="64" cy="51" r="6" />
+    <circle cx="86" cy="51" r="6" />
+  </g>
+</svg>

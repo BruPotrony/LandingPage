@@ -319,6 +319,7 @@ h1 {
 .links a:nth-child(3) { animation-delay: 620ms; }
 .links a:nth-child(4) { animation-delay: 740ms; }
 .links a:nth-child(5) { animation-delay: 860ms; }
+.links a:nth-child(6) { animation-delay: 980ms; }
 
 /* barra de acento izquierda */
 .links a::before {
@@ -378,6 +379,25 @@ h1 {
 .links a:hover .link-desc  { color: var(--olive); }
 .links a:hover::before { top: 0; bottom: 0; background: var(--mil-bright); }
 .links a:hover::after  { color: var(--mil-bright); transform: translateX(8px); }
+
+.links a.link-featured {
+  background: #566b2f;
+  border-color: #566b2f;
+}
+.links a.link-featured .link-title { color: var(--bg); }
+.links a.link-featured .link-desc  { color: var(--bg); opacity: 0.75; }
+.links a.link-featured .link-icon  { filter: brightness(0); opacity: 0.85; }
+.links a.link-featured::before,
+.links a.link-featured:hover::before { background: var(--bg); }
+.links a.link-featured::after,
+.links a.link-featured:hover::after  { color: var(--bg); }
+
+.links a.link-featured:hover {
+  background: #3f4f22;
+  border-color: #3f4f22;
+}
+.links a.link-featured:hover .link-title,
+.links a.link-featured:hover .link-desc { color: var(--bg); }
 
 /* ── footer ── */
 .footer {

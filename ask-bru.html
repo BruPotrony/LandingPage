@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bru AI · Bru Potrony</title>
+    <meta name="description" content="Bru AI: asistente con IA que responde preguntas sobre la experiencia, los proyectos y el stack de Bru Potrony Lopez." />
+    <link rel="canonical" href="https://brupotrony.com/ask-bru.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brupotrony.com/ask-bru.html" />
+    <meta property="og:title" content="Bru AI · Bru Potrony" />
+    <meta property="og:description" content="Asistente con IA que responde preguntas sobre mi experiencia, mis proyectos y mi stack." />
+    <meta property="og:image" content="https://brupotrony.com/assets/profile.png" />
+    <meta property="og:locale" content="es_ES" />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="./assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./ask-bru.css" />
+  </head>
+  <body data-title-key="titleChat">
+    <main class="wrap chat-wrap">
+      <a href="./index.html" class="back-link" data-i18n="back">← Volver</a>
+
+      <section class="card chat-card" aria-labelledby="chat-title">
+        <header class="chat-head">
+          <img class="chat-avatar" src="./assets/profile.png" alt="" aria-hidden="true" />
+
+          <div class="chat-head-body">
+            <h1 id="chat-title" class="chat-title">Bru AI</h1>
+            <p class="chat-sub" data-i18n="chatSub">Asistente con IA entrenado con mi CV, mis proyectos y mi experiencia.</p>
+          </div>
+
+          <p class="chat-status" data-status>
+            <span class="chat-status-dot" aria-hidden="true"></span>
+            <span data-status-text data-i18n="chatStatusCheck">Conectando…</span>
+          </p>
+        </header>
+
+        <div class="chat-log" data-log role="log" aria-live="polite" data-i18n-aria="chatLogAria" aria-label="Conversación">
+          <article class="msg msg-bot">
+            <div class="msg-body">
+              <p data-i18n="chatWelcome">Hola, soy el asistente de Bru. Pregúntame por su experiencia, sus proyectos o su stack.</p>
+            </div>
+          </article>
+        </div>
+
+        <form class="chat-form" data-form>
+          <label class="sr-only" for="chat-input" data-i18n="chatPlaceholder">Escribe tu pregunta…</label>
+          <textarea
+            id="chat-input"
+            class="chat-input"
+            data-input
+            rows="1"
+            maxlength="500"
+            autocomplete="off"
+            data-i18n-placeholder="chatPlaceholder"
+            placeholder="Escribe tu pregunta…"></textarea>
+          <button type="submit" class="chat-send" data-send data-i18n-aria="chatSend" aria-label="Enviar pregunta">
+            <span aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <p class="chat-foot">
+          <span class="chat-note" data-i18n="chatNote">Respuestas generadas por IA a partir de información sobre Bru. Pueden contener errores.</span>
+          <span class="chat-counter" data-counter aria-hidden="true"></span>
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Bru Potrony Lopez</p>
+    </footer>
+
+    <script src="./i18n.js"></script>
+    <script src="./script.js"></script>
+    <script src="./ask-bru.js"></script>
+  </body>
+</html>

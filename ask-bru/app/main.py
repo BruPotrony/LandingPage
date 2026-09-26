@@ -40,6 +40,4 @@ def chat(req: ChatRequest):
         answer, provider = generate(messages)
     except RuntimeError:
         raise HTTPException(503, "Servicio no disponible, prueba en un momento")
-    return {"answer": answer,
-            "sources": sorted({c["source"] for c in chunks}),
-            "provider": provider}
+    return {"answer": answer, "provider": provider}

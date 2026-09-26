@@ -6,7 +6,7 @@
   const LOCAL_HOSTS = ['localhost', '127.0.0.1', ''];
   const API_BASE = LOCAL_HOSTS.includes(location.hostname)
     ? 'http://127.0.0.1:8000'
-    : 'https://ask-bru.onrender.com';
+    : 'https://ask-bru-ai.onrender.com';
 
   const TIMEOUT_MS = 60000;   // la cadena de fallback del backend puede tardar
   const MAX_CHARS = 500;      // mismo límite que el Field de ChatRequest

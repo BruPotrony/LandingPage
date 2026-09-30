@@ -44,12 +44,31 @@
     statusText.textContent = t(key);
   };
 
+  const COLD_START_MS = 3000;
+  const RETRY_MS = 5000;
+  let coldStartShown = false;
+
+  const showColdStart = () => {
+    if (coldStartShown) return;
+    coldStartShown = true;
+    const { body } = addMessage('bot');
+    const p = el('p', '', t('chatColdStart'));
+    p.dataset.i18n = 'chatColdStart';
+    body.append(p);
+  };
+
   const checkHealth = async () => {
+    const slowTimer = setTimeout(showColdStart, COLD_START_MS);
     try {
       const res = await fetch(`${API_BASE}/health`, { method: 'GET' });
-      setStatus(res.ok ? 'online' : 'offline');
+      if (!res.ok) throw new Error(res.status);
+      setStatus('online');
     } catch {
       setStatus('offline');
+      showColdStart();
+      setTimeout(checkHealth, RETRY_MS);
+    } finally {
+      clearTimeout(slowTimer);
     }
   };
 

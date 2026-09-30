@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
-from app.retrieval import retrieve
+from app.retrieval import retrieve, sb
 from app.llm import generate
 
 app = FastAPI()
@@ -25,6 +25,7 @@ class ChatRequest(BaseModel):
 
 @app.get("/health")
 def health():
+    sb.table("chunks").select("source").limit(1).execute()
     return {"ok": True}
 
 @app.post("/chat")

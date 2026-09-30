@@ -45,6 +45,8 @@ const I18N = {
     chatErrBusy: 'El asistente está saturado ahora mismo. Prueba en unos segundos.',
     chatErrGeneric: 'Algo ha fallado al responder. Inténtalo de nuevo.',
     chatNote: 'Respuestas generadas por IA a partir de información sobre Bru. Pueden contener errores.',
+    chatDemo: 'Esto es un proyecto de prueba: las respuestas las genera una IA y pueden contener errores. Contrasta cualquier dato con el CV de Bru.',
+    chatColdStart: 'Como es un proyecto de prueba y no un caso real, uso los planes gratuitos de Render y Supabase, así que el servicio puede tardar hasta 1 minuto en arrancar.',
 
     p1a: 'Prueba de acceso para Footprint Mappa: una app que genera un PDF de reporte OCF (huella de carbono) con estadísticas y gráficos a partir de un CSV. Fui más allá del encargo y añadí scraping de la web del cliente para personalizar el informe con sus propios datos.',
     p1b: 'Implementé autenticación contra una base de datos en Xano, un chat de IA para explicar el reporte y un agente de IA (también sobre Xano) que genera recomendaciones para reducir la huella de carbono. Construí frontend y API por completo en una semana mediante vibe coding.',
@@ -107,6 +109,8 @@ const I18N = {
     chatErrBusy: 'L’assistent està saturat ara mateix. Prova-ho d’aquí uns segons.',
     chatErrGeneric: 'Alguna cosa ha fallat en respondre. Torna-ho a provar.',
     chatNote: 'Respostes generades amb IA a partir d’informació sobre en Bru. Poden contenir errors.',
+    chatDemo: 'Això és un projecte de prova: les respostes les genera una IA i poden contenir errors. Contrasta qualsevol dada amb el CV d’en Bru.',
+    chatColdStart: 'Com que és un projecte de prova i no un cas real, faig servir els plans gratuïts de Render i Supabase, així que el servei pot trigar fins a 1 minut a arrencar.',
 
     p1a: 'Prova d’accés per a Footprint Mappa: una app que genera un PDF d’informe OCF (petjada de carboni) amb estadístiques i gràfics a partir d’un CSV. Vaig anar més enllà de l’encàrrec i vaig afegir scraping del web del client per personalitzar l’informe amb les seves pròpies dades.',
     p1b: 'Vaig implementar autenticació contra una base de dades a Xano, un xat d’IA per explicar l’informe i un agent d’IA (també sobre Xano) que genera recomanacions per reduir la petjada de carboni. Vaig construir el frontend i l’API sencers en una setmana mitjançant vibe coding.',
@@ -169,6 +173,8 @@ const I18N = {
     chatErrBusy: 'The assistant is overloaded right now. Try again in a few seconds.',
     chatErrGeneric: 'Something went wrong while answering. Please try again.',
     chatNote: 'AI-generated answers based on information about Bru. They may contain mistakes.',
+    chatDemo: 'This is a demo project: answers are AI-generated and may contain mistakes. Please check any information against Bru’s CV.',
+    chatColdStart: 'Since this is a demo project and not a production service, it runs on the free tiers of Render and Supabase, so it may take up to 1 minute to start.',
 
     p1a: 'Technical test for Footprint Mappa: an app that turns a CSV into a carbon footprint (OCF) PDF report with statistics and charts. I went beyond the brief and added scraping of the client’s website to personalise the report with their own data.',
     p1b: 'I implemented authentication against a Xano database, an AI chat that explains the report and an AI agent (also on Xano) that generates recommendations to reduce the carbon footprint. I built the entire frontend and API in one week through vibe coding.',

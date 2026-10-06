@@ -51,17 +51,20 @@ const I18N = {
     p1a: 'Prueba de acceso para Footprint Mappa: una app que genera un PDF de reporte OCF (huella de carbono) con estadísticas y gráficos a partir de un CSV. Fui más allá del encargo y añadí scraping de la web del cliente para personalizar el informe con sus propios datos.',
     p1b: 'Implementé autenticación contra una base de datos en Xano, un chat de IA para explicar el reporte y un agente de IA (también sobre Xano) que genera recomendaciones para reducir la huella de carbono. Construí frontend y API por completo en una semana mediante vibe coding.',
 
-    p2a: 'ORQUE nació con dos compañeros para crear webs a medida con HTML, CSS y JavaScript.',
-    p2b: 'El proyecto me enseñó a captar clientes, entender lo que necesitaban de verdad y convertirlo en una web clara, rápida y con buen SEO.',
-    p2c: 'También aprendí a ordenar mejor el contenido para que cada web se entienda al instante.',
-    p2d: 'La combinación de diseño, comunicación y posicionamiento fue clave para hacer un proyecto más sólido.',
+    p2a: 'Bru AI es el asistente de este portfolio: un chat con RAG que responde preguntas sobre mi experiencia, mis proyectos y mi stack usando solo información real sobre mí. Lo construí de principio a fin: backend, base de datos vectorial, despliegue e interfaz.',
+    p2b: 'Mis datos se guardan como embeddings de Gemini en Supabase con pgvector, y la API en FastAPI, desplegada en Render, recupera los fragmentos relevantes para cada pregunta. Para que sea fiable con planes gratuitos, encadeno tres modelos (Gemini y Groq) con reintentos y fallback automático.',
 
-    p3a: 'Este proyecto fue el trabajo final de curso, desarrollado en equipo con dos compañeros. Yo fui el responsable del frontend, implementado con WPF, C# y .NET, creando la interfaz y la lógica de juego para una adaptación multijugador de Risk.',
-    p3b: 'Durante el desarrollo aprendí conceptos de contenedores, servidores, bases de datos y comunicación en tiempo real mediante WebSockets, necesarios para gestionar múltiples jugadores conectados simultáneamente. El proyecto se apoyaba en una base de datos MySQL y en un backend desarrollado con Java 21 y Spring Boot, con arquitectura cliente-servidor y funcionalidades multijugador en tiempo real.',
+    p3a: 'ORQUE nació con dos compañeros para crear webs a medida con HTML, CSS y JavaScript.',
+    p3b: 'El proyecto me enseñó a captar clientes, entender lo que necesitaban de verdad y convertirlo en una web clara, rápida y con buen SEO.',
+    p3c: 'También aprendí a ordenar mejor el contenido para que cada web se entienda al instante.',
+    p3d: 'La combinación de diseño, comunicación y posicionamiento fue clave para hacer un proyecto más sólido.',
 
-    p4a: 'Proyecto desarrollado en solitario, de principio a fin, para MASTERFOAM: una app de planta sobre Odoo para automatizar producción, materiales, stock, ubicaciones y fichajes, pensada para usarse desde una tablet en cada puesto de trabajo de la fábrica.',
-    p4b: 'Construí el frontend en Vue y los módulos y funciones personalizadas en Python para conectar con Odoo (ORM, controladores/APIs), cubriendo todo el ciclo: análisis, desarrollo, despliegue y formación a toda la empresa tras la puesta en marcha, siguiendo buenas prácticas de programación y tests bajo supervisión de código externa.',
-    p4c: 'Hoy la usan a diario más de 20 operarios en planta y uno de los procesos pasó de necesitar 3 personas a 1.'
+    p4a: 'Este proyecto fue el trabajo final de curso, desarrollado en equipo con dos compañeros. Yo fui el responsable del frontend, implementado con WPF, C# y .NET, creando la interfaz y la lógica de juego para una adaptación multijugador de Risk.',
+    p4b: 'Durante el desarrollo aprendí conceptos de contenedores, servidores, bases de datos y comunicación en tiempo real mediante WebSockets, necesarios para gestionar múltiples jugadores conectados simultáneamente. El proyecto se apoyaba en una base de datos MySQL y en un backend desarrollado con Java 21 y Spring Boot, con arquitectura cliente-servidor y funcionalidades multijugador en tiempo real.',
+
+    p5a: 'Proyecto desarrollado en solitario, de principio a fin, para MASTERFOAM: una app de planta sobre Odoo para automatizar producción, materiales, stock, ubicaciones y fichajes, pensada para usarse desde una tablet en cada puesto de trabajo de la fábrica.',
+    p5b: 'Construí el frontend en Vue y los módulos y funciones personalizadas en Python para conectar con Odoo (ORM, controladores/APIs), cubriendo todo el ciclo: análisis, desarrollo, despliegue y formación a toda la empresa tras la puesta en marcha, siguiendo buenas prácticas de programación y tests bajo supervisión de código externa.',
+    p5c: 'Hoy la usan a diario más de 20 operarios en planta y uno de los procesos pasó de necesitar 3 personas a 1.'
   },
 
   ca: {
@@ -115,17 +118,20 @@ const I18N = {
     p1a: 'Prova d’accés per a Footprint Mappa: una app que genera un PDF d’informe OCF (petjada de carboni) amb estadístiques i gràfics a partir d’un CSV. Vaig anar més enllà de l’encàrrec i vaig afegir scraping del web del client per personalitzar l’informe amb les seves pròpies dades.',
     p1b: 'Vaig implementar autenticació contra una base de dades a Xano, un xat d’IA per explicar l’informe i un agent d’IA (també sobre Xano) que genera recomanacions per reduir la petjada de carboni. Vaig construir el frontend i l’API sencers en una setmana mitjançant vibe coding.',
 
-    p2a: 'ORQUE va néixer amb dos companys per crear webs a mida amb HTML, CSS i JavaScript.',
-    p2b: 'El projecte em va ensenyar a captar clients, entendre què necessitaven de debò i convertir-ho en un web clar, ràpid i amb bon SEO.',
-    p2c: 'També vaig aprendre a ordenar millor el contingut perquè cada web s’entengui a l’instant.',
-    p2d: 'La combinació de disseny, comunicació i posicionament va ser clau per fer un projecte més sòlid.',
+    p2a: 'Bru AI és l’assistent d’aquest portfolio: un xat amb RAG que respon preguntes sobre la meva experiència, els meus projectes i el meu stack fent servir només informació real sobre mi. El vaig construir de principi a fi: backend, base de dades vectorial, desplegament i interfície.',
+    p2b: 'Les meves dades es desen com a embeddings de Gemini a Supabase amb pgvector, i l’API en FastAPI, desplegada a Render, recupera els fragments rellevants per a cada pregunta. Perquè sigui fiable amb plans gratuïts, encadeno tres models (Gemini i Groq) amb reintents i fallback automàtic.',
 
-    p3a: 'Aquest projecte va ser el treball final de curs, desenvolupat en equip amb dos companys. Jo vaig ser el responsable del frontend, implementat amb WPF, C# i .NET, creant la interfície i la lògica de joc per a una adaptació multijugador del Risk.',
-    p3b: 'Durant el desenvolupament vaig aprendre conceptes de contenidors, servidors, bases de dades i comunicació en temps real mitjançant WebSockets, necessaris per gestionar múltiples jugadors connectats simultàniament. El projecte es recolzava en una base de dades MySQL i en un backend desenvolupat amb Java 21 i Spring Boot, amb arquitectura client-servidor i funcionalitats multijugador en temps real.',
+    p3a: 'ORQUE va néixer amb dos companys per crear webs a mida amb HTML, CSS i JavaScript.',
+    p3b: 'El projecte em va ensenyar a captar clients, entendre què necessitaven de debò i convertir-ho en un web clar, ràpid i amb bon SEO.',
+    p3c: 'També vaig aprendre a ordenar millor el contingut perquè cada web s’entengui a l’instant.',
+    p3d: 'La combinació de disseny, comunicació i posicionament va ser clau per fer un projecte més sòlid.',
 
-    p4a: 'Projecte desenvolupat en solitari, de principi a fi, per a MASTERFOAM: una app de planta sobre Odoo per automatitzar producció, materials, estoc, ubicacions i fitxatges, pensada per fer-se servir des d’una tauleta a cada lloc de treball de la fàbrica.',
-    p4b: 'Vaig construir el frontend en Vue i els mòduls i funcions personalitzades en Python per connectar amb Odoo (ORM, controladors/APIs), cobrint tot el cicle: anàlisi, desenvolupament, desplegament i formació a tota l’empresa després de la posada en marxa, seguint bones pràctiques de programació i tests sota supervisió de codi externa.',
-    p4c: 'Avui l’utilitzen a diari més de 20 operaris a planta i un dels processos va passar de necessitar 3 persones a 1.'
+    p4a: 'Aquest projecte va ser el treball final de curs, desenvolupat en equip amb dos companys. Jo vaig ser el responsable del frontend, implementat amb WPF, C# i .NET, creant la interfície i la lògica de joc per a una adaptació multijugador del Risk.',
+    p4b: 'Durant el desenvolupament vaig aprendre conceptes de contenidors, servidors, bases de dades i comunicació en temps real mitjançant WebSockets, necessaris per gestionar múltiples jugadors connectats simultàniament. El projecte es recolzava en una base de dades MySQL i en un backend desenvolupat amb Java 21 i Spring Boot, amb arquitectura client-servidor i funcionalitats multijugador en temps real.',
+
+    p5a: 'Projecte desenvolupat en solitari, de principi a fi, per a MASTERFOAM: una app de planta sobre Odoo per automatitzar producció, materials, estoc, ubicacions i fitxatges, pensada per fer-se servir des d’una tauleta a cada lloc de treball de la fàbrica.',
+    p5b: 'Vaig construir el frontend en Vue i els mòduls i funcions personalitzades en Python per connectar amb Odoo (ORM, controladors/APIs), cobrint tot el cicle: anàlisi, desenvolupament, desplegament i formació a tota l’empresa després de la posada en marxa, seguint bones pràctiques de programació i tests sota supervisió de codi externa.',
+    p5c: 'Avui l’utilitzen a diari més de 20 operaris a planta i un dels processos va passar de necessitar 3 persones a 1.'
   },
 
   en: {
@@ -179,17 +185,20 @@ const I18N = {
     p1a: 'Technical test for Footprint Mappa: an app that turns a CSV into a carbon footprint (OCF) PDF report with statistics and charts. I went beyond the brief and added scraping of the client’s website to personalise the report with their own data.',
     p1b: 'I implemented authentication against a Xano database, an AI chat that explains the report and an AI agent (also on Xano) that generates recommendations to reduce the carbon footprint. I built the entire frontend and API in one week through vibe coding.',
 
-    p2a: 'ORQUE started with two colleagues to build custom websites with HTML, CSS and JavaScript.',
-    p2b: 'The project taught me to find clients, understand what they actually needed and turn it into a clear, fast website with good SEO.',
-    p2c: 'I also learned to structure content better so that each site is understood at a glance.',
-    p2d: 'Combining design, communication and search positioning was key to making the project more solid.',
+    p2a: 'Bru AI is the assistant on this portfolio: a RAG chat that answers questions about my experience, my projects and my stack using only real information about me. I built it end to end: backend, vector database, deployment and interface.',
+    p2b: 'My data is stored as Gemini embeddings in Supabase with pgvector, and the FastAPI service, deployed on Render, retrieves the relevant chunks for each question. To keep it reliable on free tiers, I chain three models (Gemini and Groq) with retries and automatic fallback.',
 
-    p3a: 'This was my final course project, built as a team of three. I was responsible for the frontend, implemented with WPF, C# and .NET, creating the interface and the game logic for a multiplayer adaptation of Risk.',
-    p3b: 'Along the way I learned about containers, servers, databases and real-time communication over WebSockets, all needed to handle several players connected at once. The project ran on a MySQL database and a backend built with Java 21 and Spring Boot, with a client-server architecture and real-time multiplayer features.',
+    p3a: 'ORQUE started with two colleagues to build custom websites with HTML, CSS and JavaScript.',
+    p3b: 'The project taught me to find clients, understand what they actually needed and turn it into a clear, fast website with good SEO.',
+    p3c: 'I also learned to structure content better so that each site is understood at a glance.',
+    p3d: 'Combining design, communication and search positioning was key to making the project more solid.',
 
-    p4a: 'A project I built end to end on my own for MASTERFOAM: a shop-floor app on top of Odoo to automate production, materials, stock, locations and time tracking, designed to be used from a tablet at every workstation in the factory.',
-    p4b: 'I built the frontend in Vue and the custom modules and functions in Python to connect with Odoo (ORM, controllers/APIs), covering the whole cycle: analysis, development, deployment and training for the entire company after go-live, following good programming practices and tests under external code review.',
-    p4c: 'More than 20 operators now use it daily on the factory floor, and one of the processes went from needing 3 people to 1.'
+    p4a: 'This was my final course project, built as a team of three. I was responsible for the frontend, implemented with WPF, C# and .NET, creating the interface and the game logic for a multiplayer adaptation of Risk.',
+    p4b: 'Along the way I learned about containers, servers, databases and real-time communication over WebSockets, all needed to handle several players connected at once. The project ran on a MySQL database and a backend built with Java 21 and Spring Boot, with a client-server architecture and real-time multiplayer features.',
+
+    p5a: 'A project I built end to end on my own for MASTERFOAM: a shop-floor app on top of Odoo to automate production, materials, stock, locations and time tracking, designed to be used from a tablet at every workstation in the factory.',
+    p5b: 'I built the frontend in Vue and the custom modules and functions in Python to connect with Odoo (ORM, controllers/APIs), covering the whole cycle: analysis, development, deployment and training for the entire company after go-live, following good programming practices and tests under external code review.',
+    p5c: 'More than 20 operators now use it daily on the factory floor, and one of the processes went from needing 3 people to 1.'
   }
 };
 

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyectos · Bru Potrony</title>
-    <meta name="description" content="Proyectos de Bru Potrony Lopez: app de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida." />
+    <meta name="description" content="Proyectos de Bru Potrony Lopez: asistente con IA (RAG) sobre FastAPI y Supabase, app de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida." />
     <link rel="canonical" href="https://brupotrony.com/proyectos.html" />
 
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://brupotrony.com/proyectos.html" />
     <meta property="og:title" content="Proyectos · Bru Potrony" />
-    <meta property="og:description" content="App de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida." />
+    <meta property="og:description" content="Asistente con IA (RAG) sobre FastAPI y Supabase, app de planta sobre Odoo, generador de reportes con Next.js, Risk multijugador en C#/.NET y webs a medida." />
     <meta property="og:image" content="https://brupotrony.com/assets/profile.png" />
     <meta property="og:locale" content="es_ES" />
     <meta name="twitter:card" content="summary" />
@@ -66,7 +66,40 @@
             <article class="project-item" aria-labelledby="project-2" data-slide>
               <header class="project-head">
                 <span class="project-index" aria-hidden="true">02</span>
-                <h2 id="project-2" class="project-title">ORQUE</h2>
+                <h2 id="project-2" class="project-title">Bru AI</h2>
+                <span class="project-tech">Python, FastAPI, RAG, Supabase (pgvector), Gemini, Groq, Render</span>
+              </header>
+
+              <div class="project-split">
+                <div class="project-media-column">
+                  <figure class="pc-mockup">
+                    <div class="pc-frame">
+                      <img class="pc-screen" src="./assets/projects/ask-bru/ask-bru.png" alt="Captura del chat de Bru AI" decoding="async" loading="lazy" />
+                    </div>
+                  </figure>
+                </div>
+
+                <div class="project-text">
+                  <p data-i18n="p2a">Bru AI es el asistente de este portfolio: un chat con RAG que responde preguntas sobre mi experiencia, mis proyectos y mi stack usando solo información real sobre mí. Lo construí de principio a fin: backend, base de datos vectorial, despliegue e interfaz.</p>
+                  <p data-i18n="p2b">Mis datos se guardan como embeddings de Gemini en Supabase con pgvector, y la API en FastAPI, desplegada en Render, recupera los fragmentos relevantes para cada pregunta. Para que sea fiable con planes gratuitos, encadeno tres modelos (Gemini y Groq) con reintentos y fallback automático.</p>
+                </div>
+              </div>
+
+              <div class="project-actions">
+                <a class="project-action" href="https://github.com/BruPotrony/LandingPage/tree/main/ask-bru" target="_blank" rel="noreferrer">
+                  <img class="project-action-icon" src="./assets/icons/github.png" alt="" />
+                  <span>GitHub</span>
+                </a>
+                <a class="project-action project-action-light" href="./ask-bru.html">
+                  <span data-i18n="preview">Vista previa</span>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-item" aria-labelledby="project-3" data-slide>
+              <header class="project-head">
+                <span class="project-index" aria-hidden="true">03</span>
+                <h2 id="project-3" class="project-title">ORQUE</h2>
                 <span class="project-tech">JavaScript, HTML/CSS</span>
               </header>
 
@@ -80,10 +113,10 @@
                 </div>
 
                 <div class="project-text">
-                  <p data-i18n="p2a">ORQUE nació con dos compañeros para crear webs a medida con HTML, CSS y JavaScript.</p>
-                  <p data-i18n="p2b">El proyecto me enseñó a captar clientes, entender lo que necesitaban de verdad y convertirlo en una web clara, rápida y con buen SEO.</p>
-                  <p data-i18n="p2c">También aprendí a ordenar mejor el contenido para que cada web se entienda al instante.</p>
-                  <p data-i18n="p2d">La combinación de diseño, comunicación y posicionamiento fue clave para hacer un proyecto más sólido.</p>
+                  <p data-i18n="p3a">ORQUE nació con dos compañeros para crear webs a medida con HTML, CSS y JavaScript.</p>
+                  <p data-i18n="p3b">El proyecto me enseñó a captar clientes, entender lo que necesitaban de verdad y convertirlo en una web clara, rápida y con buen SEO.</p>
+                  <p data-i18n="p3c">También aprendí a ordenar mejor el contenido para que cada web se entienda al instante.</p>
+                  <p data-i18n="p3d">La combinación de diseño, comunicación y posicionamiento fue clave para hacer un proyecto más sólido.</p>
                 </div>
               </div>
 
@@ -98,10 +131,10 @@
               </div>
             </article>
 
-            <article class="project-item" aria-labelledby="project-3" data-slide>
+            <article class="project-item" aria-labelledby="project-4" data-slide>
               <header class="project-head">
-                <span class="project-index" aria-hidden="true">03</span>
-                <h2 id="project-3" class="project-title">Risk</h2>
+                <span class="project-index" aria-hidden="true">04</span>
+                <h2 id="project-4" class="project-title">Risk</h2>
                 <span class="project-tech">C#, .NET, WPF, Java, Spring Boot, MySQL, WebSockets</span>
               </header>
 
@@ -115,8 +148,8 @@
                 </div>
 
                 <div class="project-text">
-                  <p data-i18n="p3a">Este proyecto fue el trabajo final de curso, desarrollado en equipo con dos compañeros. Yo fui el responsable del frontend, implementado con WPF, C# y .NET, creando la interfaz y la lógica de juego para una adaptación multijugador de Risk.</p>
-                  <p data-i18n="p3b">Durante el desarrollo aprendí conceptos de contenedores, servidores, bases de datos y comunicación en tiempo real mediante WebSockets, necesarios para gestionar múltiples jugadores conectados simultáneamente. El proyecto se apoyaba en una base de datos MySQL y en un backend desarrollado con Java 21 y Spring Boot, con arquitectura cliente-servidor y funcionalidades multijugador en tiempo real.</p>
+                  <p data-i18n="p4a">Este proyecto fue el trabajo final de curso, desarrollado en equipo con dos compañeros. Yo fui el responsable del frontend, implementado con WPF, C# y .NET, creando la interfaz y la lógica de juego para una adaptación multijugador de Risk.</p>
+                  <p data-i18n="p4b">Durante el desarrollo aprendí conceptos de contenedores, servidores, bases de datos y comunicación en tiempo real mediante WebSockets, necesarios para gestionar múltiples jugadores conectados simultáneamente. El proyecto se apoyaba en una base de datos MySQL y en un backend desarrollado con Java 21 y Spring Boot, con arquitectura cliente-servidor y funcionalidades multijugador en tiempo real.</p>
                 </div>
               </div>
 
@@ -141,10 +174,10 @@
               </div>
             </article>
 
-            <article class="project-item" aria-labelledby="project-4" data-slide>
+            <article class="project-item" aria-labelledby="project-5" data-slide>
               <header class="project-head">
-                <span class="project-index" aria-hidden="true">04</span>
-                <h2 id="project-4" class="project-title">Odoo</h2>
+                <span class="project-index" aria-hidden="true">05</span>
+                <h2 id="project-5" class="project-title">Odoo</h2>
                 <span class="project-tech">Python, Odoo (ORM/APIs), Vue, JavaScript</span>
               </header>
 
@@ -158,9 +191,9 @@
                 </div>
 
                 <div class="project-text">
-                  <p data-i18n="p4a">Proyecto desarrollado en solitario, de principio a fin, para MASTERFOAM: una app de planta sobre Odoo para automatizar producción, materiales, stock, ubicaciones y fichajes, pensada para usarse desde una tablet en cada puesto de trabajo de la fábrica.</p>
-                  <p data-i18n="p4b">Construí el frontend en Vue y los módulos y funciones personalizadas en Python para conectar con Odoo (ORM, controladores/APIs), cubriendo todo el ciclo: análisis, desarrollo, despliegue y formación a toda la empresa tras la puesta en marcha, siguiendo buenas prácticas de programación y tests bajo supervisión de código externa.</p>
-                  <p data-i18n="p4c">Hoy la usan a diario más de 20 operarios en planta y uno de los procesos pasó de necesitar 3 personas a 1.</p>
+                  <p data-i18n="p5a">Proyecto desarrollado en solitario, de principio a fin, para MASTERFOAM: una app de planta sobre Odoo para automatizar producción, materiales, stock, ubicaciones y fichajes, pensada para usarse desde una tablet en cada puesto de trabajo de la fábrica.</p>
+                  <p data-i18n="p5b">Construí el frontend en Vue y los módulos y funciones personalizadas en Python para conectar con Odoo (ORM, controladores/APIs), cubriendo todo el ciclo: análisis, desarrollo, despliegue y formación a toda la empresa tras la puesta en marcha, siguiendo buenas prácticas de programación y tests bajo supervisión de código externa.</p>
+                  <p data-i18n="p5c">Hoy la usan a diario más de 20 operarios en planta y uno de los procesos pasó de necesitar 3 personas a 1.</p>
                 </div>
               </div>
 
@@ -188,7 +221,7 @@
           <button class="carousel-arrow" type="button" data-i18n-aria="nextAria" aria-label="Proyecto siguiente" data-next>❯</button>
         </section>
 
-        <p class="carousel-counter" data-counter>1 / 4</p>
+        <p class="carousel-counter" data-counter>1 / 5</p>
       </section>
     </main>
 
